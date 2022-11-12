@@ -1,0 +1,18 @@
+Opportunity Close date cannot be at the past:
+Validation rule should fire if IsClosed is not selected and CloseDate is yesterday or earlier. 
+Validation rule should display the error. 
+Create a Validation Rule That Uses AND
+Ensure that an opportunity can only be created if its CloseDate is today or later.
+Create a validation rule:
+Object: Opportunity
+Name: Close_Date_Alert
+Criteria (both must be true):
+IsClosed is not selected
+CloseDate is before today
+Error message: The close date must be today or later
+
+
+
+!(IsClosed) && Today() -  CloseDate  > 0    meaning close date is in the past
+
+
